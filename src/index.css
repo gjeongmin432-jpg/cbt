@@ -6,13 +6,15 @@
   body {
     @apply antialiased text-slate-800 bg-slate-100;
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    word-break: keep-all; /* 한국어 단어 단위 줄바꿈으로 가독성 대폭 향상 */
+    overflow-wrap: break-word;
   }
 }
 
 /* Custom scrollbars for CBT feel */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
