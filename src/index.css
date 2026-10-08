@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-slate-800 bg-slate-100;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  }
+}
+
+/* Custom scrollbars for CBT feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Highlight styling for Diff view */
+.diff-added {
+  @apply bg-emerald-100 text-emerald-900 border-b-2 border-emerald-500 font-medium px-0.5 rounded;
+}
+
+.diff-removed {
+  @apply bg-rose-100 text-rose-800 line-through opacity-70 px-0.5 rounded;
+}
+
+.diff-common {
+  @apply text-slate-800;
+}
